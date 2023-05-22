@@ -1,6 +1,6 @@
 <template>
     <div class="canvas-animation-body">
-        <div class="canvas-container">
+        <div ref="canvasContainer" class="canvas-container">
             <canvas ref="canvas"></canvas>
         </div>
         <div class="canvas-animation-list">
@@ -10,31 +10,39 @@
 </template>
 
 <script setup lang="ts">
-import { nextTick, ref } from "vue";
+import { nextTick, onMounted, onUnmounted, ref } from "vue";
 import AnimationList from "./layout/animationList.vue";
 
+const canvasContainer = ref<HTMLDivElement>();
 const canvas = ref<HTMLCanvasElement>();
+const ctx = ref<CanvasRenderingContext2D>();
 nextTick(() => {
-    if (canvas.value) {
-        const width = canvas.value.clientWidth;
-        const height = canvas.value.clientHeight;
+    if (canvas.value && canvasContainer.value) {
+        // 字体加载完成后再绘制
+        document.fonts.ready.then(() => {
+            resizeCanvas();
+        });
+    }
+});
+
+const resizeCanvas = () => {
+    if (canvas.value && canvasContainer.value) {
+        const width = canvasContainer.value.clientWidth;
+        const height = canvasContainer.value.clientHeight;
         canvas.value.style.width = `${width}px`;
         canvas.value.style.height = `${height}px`;
 
         const dpr = window.devicePixelRatio;
         canvas.value.width = width * dpr;
         canvas.value.height = height * dpr;
-        const ctx = canvas.value.getContext("2d", {
+        ctx.value = canvas.value.getContext("2d", {
             willReadFrequently: true
         })!;
-        ctx.scale(dpr, dpr);
+        ctx.value.scale(dpr, dpr);
 
-        // 字体加载完成后再绘制
-        document.fonts.ready.then(() => {
-            drawAnimationText(ctx);
-        });
+        drawAnimationText(ctx.value);
     }
-});
+};
 
 const drawAnimationText = (ctx: CanvasRenderingContext2D) => {
     const width = canvas.value!.width;
@@ -52,6 +60,14 @@ const drawAnimationText = (ctx: CanvasRenderingContext2D) => {
     ctx.fillText(text, x, y);
     ctx.restore();
 };
+
+onMounted(() => {
+    window.addEventListener("resize", resizeCanvas);
+});
+
+onUnmounted(() => {
+    window.removeEventListener("resize", resizeCanvas);
+});
 </script>
 
 <style lang="scss">
