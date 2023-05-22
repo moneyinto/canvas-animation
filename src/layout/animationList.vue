@@ -10,7 +10,7 @@
                 class="animation-item"
                 v-for="child in item.children"
                 :key="child.name"
-                @click="selectAnimation(child.name)"
+                @click="selectAnimation(child.name, child.duration)"
             >
                 {{ child.name }}
             </div>
@@ -21,8 +21,10 @@
 <script setup lang="ts">
 import { ANIMATION_LIST } from "@/config/animation";
 
-const selectAnimation = (animation: string) => {
-    console.log(animation);
+const emit = defineEmits(["selectAnimation"]);
+
+const selectAnimation = (animation: string, duration: number) => {
+    emit("selectAnimation", animation, duration);
 };
 </script>
 

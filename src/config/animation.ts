@@ -3,40 +3,52 @@ export const ANIMATION_LIST = [
         name: "Attention seekers",
         children: [
             {
-                name: "bounce"
+                name: "bounce",
+                duration: 1000
             },
             {
-                name: "flash"
+                name: "flash",
+                duration: 1000
             },
             {
-                name: "pulse"
+                name: "pulse",
+                duration: 1000
             },
             {
-                name: "rubberBand"
+                name: "rubberBand",
+                duration: 1000
             },
             {
-                name: "shakeX"
+                name: "shakeX",
+                duration: 1000
             },
             {
-                name: "shakeY"
+                name: "shakeY",
+                duration: 1000
             },
             {
-                name: "headShake"
+                name: "headShake",
+                duration: 1000
             },
             {
-                name: "swing"
+                name: "swing",
+                duration: 1000
             },
             {
-                name: "tada"
+                name: "tada",
+                duration: 1000
             },
             {
-                name: "wobble"
+                name: "wobble",
+                duration: 1000
             },
             {
-                name: "jello"
+                name: "jello",
+                duration: 1000
             },
             {
-                name: "heartBeat"
+                name: "heartBeat",
+                duration: 1000
             }
         ]
     },
@@ -44,16 +56,20 @@ export const ANIMATION_LIST = [
         name: "Back entrances",
         children: [
             {
-                name: "backInDown"
+                name: "backInDown",
+                duration: 1000
             },
             {
-                name: "backInLeft"
+                name: "backInLeft",
+                duration: 1000
             },
             {
-                name: "backInRight"
+                name: "backInRight",
+                duration: 1000
             },
             {
-                name: "backInUp"
+                name: "backInUp",
+                duration: 1000
             }
         ]
     },
@@ -61,16 +77,20 @@ export const ANIMATION_LIST = [
         name: "Back exits",
         children: [
             {
-                name: "backOutDown"
+                name: "backOutDown",
+                duration: 1000
             },
             {
-                name: "backOutLeft"
+                name: "backOutLeft",
+                duration: 1000
             },
             {
-                name: "backOutRight"
+                name: "backOutRight",
+                duration: 1000
             },
             {
-                name: "backOutUp"
+                name: "backOutUp",
+                duration: 1000
             }
         ]
     },
@@ -78,19 +98,24 @@ export const ANIMATION_LIST = [
         name: "Bouncing entrances",
         children: [
             {
-                name: "bounceIn"
+                name: "bounceIn",
+                duration: 1000
             },
             {
-                name: "bounceInDown"
+                name: "bounceInDown",
+                duration: 1000
             },
             {
-                name: "bounceInLeft"
+                name: "bounceInLeft",
+                duration: 1000
             },
             {
-                name: "bounceInRight"
+                name: "bounceInRight",
+                duration: 1000
             },
             {
-                name: "bounceInUp"
+                name: "bounceInUp",
+                duration: 1000
             }
         ]
     },
@@ -98,19 +123,24 @@ export const ANIMATION_LIST = [
         name: "Bouncing exits",
         children: [
             {
-                name: "bounceOut"
+                name: "bounceOut",
+                duration: 1000
             },
             {
-                name: "bounceOutDown"
+                name: "bounceOutDown",
+                duration: 1000
             },
             {
-                name: "bounceOutLeft"
+                name: "bounceOutLeft",
+                duration: 1000
             },
             {
-                name: "bounceOutRight"
+                name: "bounceOutRight",
+                duration: 1000
             },
             {
-                name: "bounceOutUp"
+                name: "bounceOutUp",
+                duration: 1000
             }
         ]
     },
@@ -118,31 +148,40 @@ export const ANIMATION_LIST = [
         name: "Fading entrances",
         children: [
             {
-                name: "fadeIn"
+                name: "fadeIn",
+                duration: 1000
             },
             {
-                name: "fadeInDown"
+                name: "fadeInDown",
+                duration: 1000
             },
             {
-                name: "fadeInDownBig"
+                name: "fadeInDownBig",
+                duration: 1000
             },
             {
-                name: "fadeInLeft"
+                name: "fadeInLeft",
+                duration: 1000
             },
             {
-                name: "fadeInLeftBig"
+                name: "fadeInLeftBig",
+                duration: 1000
             },
             {
-                name: "fadeInRight"
+                name: "fadeInRight",
+                duration: 1000
             },
             {
-                name: "fadeInRightBig"
+                name: "fadeInRightBig",
+                duration: 1000
             },
             {
-                name: "fadeInUp"
+                name: "fadeInUp",
+                duration: 1000
             },
             {
-                name: "fadeInUpBig"
+                name: "fadeInUpBig",
+                duration: 1000
             }
         ]
     },
@@ -150,31 +189,40 @@ export const ANIMATION_LIST = [
         name: "Fading exits",
         children: [
             {
-                name: "fadeOut"
+                name: "fadeOut",
+                duration: 1000
             },
             {
-                name: "fadeOutDown"
+                name: "fadeOutDown",
+                duration: 1000
             },
             {
-                name: "fadeOutDownBig"
+                name: "fadeOutDownBig",
+                duration: 1000
             },
             {
-                name: "fadeOutLeft"
+                name: "fadeOutLeft",
+                duration: 1000
             },
             {
-                name: "fadeOutLeftBig"
+                name: "fadeOutLeftBig",
+                duration: 1000
             },
             {
-                name: "fadeOutRight"
+                name: "fadeOutRight",
+                duration: 1000
             },
             {
-                name: "fadeOutRightBig"
+                name: "fadeOutRightBig",
+                duration: 1000
             },
             {
-                name: "fadeOutUp"
+                name: "fadeOutUp",
+                duration: 1000
             },
             {
-                name: "fadeOutUpBig"
+                name: "fadeOutUpBig",
+                duration: 1000
             }
         ]
     },
@@ -182,19 +230,24 @@ export const ANIMATION_LIST = [
         name: "Flippers",
         children: [
             {
-                name: "flip"
+                name: "flip",
+                duration: 1000
             },
             {
-                name: "flipInX"
+                name: "flipInX",
+                duration: 1000
             },
             {
-                name: "flipInY"
+                name: "flipInY",
+                duration: 1000
             },
             {
-                name: "flipOutX"
+                name: "flipOutX",
+                duration: 1000
             },
             {
-                name: "flipOutY"
+                name: "flipOutY",
+                duration: 1000
             }
         ]
     },
@@ -202,16 +255,20 @@ export const ANIMATION_LIST = [
         name: "Lightspeed",
         children: [
             {
-                name: "lightSpeedInRight"
+                name: "lightSpeedInRight",
+                duration: 1000
             },
             {
-                name: "lightSpeedInLeft"
+                name: "lightSpeedInLeft",
+                duration: 1000
             },
             {
-                name: "lightSpeedOutRight"
+                name: "lightSpeedOutRight",
+                duration: 1000
             },
             {
-                name: "lightSpeedOutLeft"
+                name: "lightSpeedOutLeft",
+                duration: 1000
             }
         ]
     },
@@ -219,19 +276,24 @@ export const ANIMATION_LIST = [
         name: "Rotating entrances",
         children: [
             {
-                name: "rotateIn"
+                name: "rotateIn",
+                duration: 1000
             },
             {
-                name: "rotateInDownLeft"
+                name: "rotateInDownLeft",
+                duration: 1000
             },
             {
-                name: "rotateInDownRight"
+                name: "rotateInDownRight",
+                duration: 1000
             },
             {
-                name: "rotateInUpLeft"
+                name: "rotateInUpLeft",
+                duration: 1000
             },
             {
-                name: "rotateInUpRight"
+                name: "rotateInUpRight",
+                duration: 1000
             }
         ]
     },
@@ -239,19 +301,24 @@ export const ANIMATION_LIST = [
         name: "Rotating exits",
         children: [
             {
-                name: "rotateOut"
+                name: "rotateOut",
+                duration: 1000
             },
             {
-                name: "rotateOutDownLeft"
+                name: "rotateOutDownLeft",
+                duration: 1000
             },
             {
-                name: "rotateOutDownRight"
+                name: "rotateOutDownRight",
+                duration: 1000
             },
             {
-                name: "rotateOutUpLeft"
+                name: "rotateOutUpLeft",
+                duration: 1000
             },
             {
-                name: "rotateOutUpRight"
+                name: "rotateOutUpRight",
+                duration: 1000
             }
         ]
     },
@@ -259,16 +326,20 @@ export const ANIMATION_LIST = [
         name: "Specials",
         children: [
             {
-                name: "hinge"
+                name: "hinge",
+                duration: 1000
             },
             {
-                name: "jackInTheBox"
+                name: "jackInTheBox",
+                duration: 1000
             },
             {
-                name: "rollIn"
+                name: "rollIn",
+                duration: 1000
             },
             {
-                name: "rollOut"
+                name: "rollOut",
+                duration: 1000
             }
         ]
     },
@@ -276,19 +347,24 @@ export const ANIMATION_LIST = [
         name: "Zooming entrances",
         children: [
             {
-                name: "zoomIn"
+                name: "zoomIn",
+                duration: 1000
             },
             {
-                name: "zoomInDown"
+                name: "zoomInDown",
+                duration: 1000
             },
             {
-                name: "zoomInLeft"
+                name: "zoomInLeft",
+                duration: 1000
             },
             {
-                name: "zoomInRight"
+                name: "zoomInRight",
+                duration: 1000
             },
             {
-                name: "zoomInUp"
+                name: "zoomInUp",
+                duration: 1000
             }
         ]
     },
@@ -296,19 +372,24 @@ export const ANIMATION_LIST = [
         name: "Zooming exits",
         children: [
             {
-                name: "zoomOut"
+                name: "zoomOut",
+                duration: 1000
             },
             {
-                name: "zoomOutDown"
+                name: "zoomOutDown",
+                duration: 1000
             },
             {
-                name: "zoomOutLeft"
+                name: "zoomOutLeft",
+                duration: 1000
             },
             {
-                name: "zoomOutRight"
+                name: "zoomOutRight",
+                duration: 1000
             },
             {
-                name: "zoomOutUp"
+                name: "zoomOutUp",
+                duration: 1000
             }
         ]
     },
@@ -316,16 +397,20 @@ export const ANIMATION_LIST = [
         name: "Sliding entrances",
         children: [
             {
-                name: "slideInUp"
+                name: "slideInUp",
+                duration: 1000
             },
             {
-                name: "slideInDown"
+                name: "slideInDown",
+                duration: 1000
             },
             {
-                name: "slideInLeft"
+                name: "slideInLeft",
+                duration: 1000
             },
             {
-                name: "slideInRight"
+                name: "slideInRight",
+                duration: 1000
             }
         ]
     },
@@ -334,16 +419,20 @@ export const ANIMATION_LIST = [
         name: "Sliding exits",
         children: [
             {
-                name: "slideOutUp"
+                name: "slideOutUp",
+                duration: 1000
             },
             {
-                name: "slideOutDown"
+                name: "slideOutDown",
+                duration: 1000
             },
             {
-                name: "slideOutLeft"
+                name: "slideOutLeft",
+                duration: 1000
             },
             {
-                name: "slideOutRight"
+                name: "slideOutRight",
+                duration: 1000
             }
         ]
     }

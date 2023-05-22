@@ -4,7 +4,7 @@
             <canvas ref="canvas"></canvas>
         </div>
         <div class="canvas-animation-list">
-            <AnimationList />
+            <AnimationList @selectAnimation="selectAnimation" />
         </div>
     </div>
 </template>
@@ -12,18 +12,39 @@
 <script setup lang="ts">
 import { nextTick, onMounted, onUnmounted, ref } from "vue";
 import AnimationList from "./layout/animationList.vue";
+import CanvasAnimation from "./animation";
 
 const canvasContainer = ref<HTMLDivElement>();
 const canvas = ref<HTMLCanvasElement>();
 const ctx = ref<CanvasRenderingContext2D>();
+let animation: CanvasAnimation;
+const text = "Animate.css";
+let x = 0;
+let y = 0;
 nextTick(() => {
     if (canvas.value && canvasContainer.value) {
         // 字体加载完成后再绘制
         document.fonts.ready.then(() => {
             resizeCanvas();
+
+            if (ctx.value) {
+                const context = ctx.value;
+                animation = new CanvasAnimation(context, () => {
+                    drawAnimationText(context, text, x, y);
+                }, clearRect);
+            }
         });
     }
 });
+
+const selectAnimation = (type: string, duration: number) => {
+    console.log(type, duration);
+    animation.setOptions({
+        type,
+        duration
+    });
+    animation.start();
+};
 
 const resizeCanvas = () => {
     if (canvas.value && canvasContainer.value) {
@@ -35,28 +56,37 @@ const resizeCanvas = () => {
         const dpr = window.devicePixelRatio;
         canvas.value.width = width * dpr;
         canvas.value.height = height * dpr;
-        ctx.value = canvas.value.getContext("2d", {
-            willReadFrequently: true
-        })!;
+        if (!ctx.value) {
+            ctx.value = canvas.value.getContext("2d", {
+                willReadFrequently: true
+            })!;
+        }
         ctx.value.scale(dpr, dpr);
 
-        drawAnimationText(ctx.value);
+        clearRect();
+
+        ctx.value.font = "normal bold 64px 'Work Sans'";
+        ctx.value.fillStyle = "#351c75";
+        const metrics = ctx.value.measureText(text);
+        const actualWidth = metrics.actualBoundingBoxRight - metrics.actualBoundingBoxLeft;
+        const actualHeight = metrics.actualBoundingBoxAscent + metrics.actualBoundingBoxDescent;
+        x = -actualWidth / 2;
+        y = actualHeight / 2;
+        ctx.value.translate(width / 2, height / 2);
+        drawAnimationText(ctx.value, text, x, y);
     }
 };
 
-const drawAnimationText = (ctx: CanvasRenderingContext2D) => {
-    const width = canvas.value!.width;
-    const height = canvas.value!.height;
-    ctx.clearRect(0, 0, width, height);
+const clearRect = () => {
+    if (canvas.value && ctx.value) {
+        const width = canvas.value.clientWidth;
+        const height = canvas.value.clientHeight;
+        ctx.value.clearRect(-width / 2, -height / 2, canvas.value!.width, canvas.value!.height);
+    }
+};
+
+const drawAnimationText = (ctx: CanvasRenderingContext2D, text: string, x: number, y: number) => {
     ctx.save();
-    ctx.font = "normal bold 64px 'Work Sans'";
-    ctx.fillStyle = "#351c75";
-    const text = "Animate.css";
-    const metrics = ctx.measureText(text);
-    const actualWidth = metrics.actualBoundingBoxRight - metrics.actualBoundingBoxLeft;
-    const actualHeight = metrics.actualBoundingBoxAscent + metrics.actualBoundingBoxDescent;
-    const x = width / 2 - actualWidth / 2;
-    const y = height / 2 - actualHeight / 2;
     ctx.fillText(text, x, y);
     ctx.restore();
 };
