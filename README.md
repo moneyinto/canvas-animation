@@ -18,4 +18,4 @@
 </p>
 
 # CANVAS-ANIMATION
-> Canvas 实现 Animate.css 的动画效果。
+> Canvas 实现 [Animate.css](https://animate.style/) 的动画效果。
