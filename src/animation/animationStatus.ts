@@ -1630,6 +1630,42 @@ export const animationStatus: IAnimationStatus = {
             opacity: 0,
             change: false
         }
+    ],
+    hinge: [
+        {
+            ...baseKeyframe,
+            range: [0, 20],
+            originRotate: 0,
+            rotate: 80
+        },
+        {
+            ...baseKeyframe,
+            range: [20, 40],
+            originRotate: 80,
+            rotate: 60
+        },
+        {
+            ...baseKeyframe,
+            range: [40, 60],
+            originRotate: 60,
+            rotate: 80
+        },
+        {
+            ...baseKeyframe,
+            range: [60, 80],
+            originRotate: 80,
+            rotate: 60
+        },
+        {
+            ...baseKeyframe,
+            range: [80, 100],
+            originTranslate: [0, 0],
+            translate: [0, 700],
+            originRotate: 60,
+            rotate: 60,
+            originOpacity: 1,
+            opacity: 0
+        }
     ]
 };
 

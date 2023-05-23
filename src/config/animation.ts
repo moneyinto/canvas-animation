@@ -359,7 +359,7 @@ export const ANIMATION_LIST = [
         children: [
             {
                 name: "hinge",
-                duration: 1000
+                duration: 2000
             },
             {
                 name: "jackInTheBox",
