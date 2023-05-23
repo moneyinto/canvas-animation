@@ -131,7 +131,8 @@ const drawAnimationText = (
     } else if (
         animationType === "rotateInDownRight" ||
         animationType === "rotateInUpRight" ||
-        animationType === "rotateOutDownRight"
+        animationType === "rotateOutDownRight" ||
+        animationType === "rotateOutUpRight"
     ) {
         ctx.fillText(text, x - actualWidth / 2, y - actualHeight / 2);
     } else {

@@ -70,7 +70,8 @@ export default class CanvasAnimation {
         } else if (
             this._animationTyep === "rotateInDownRight" ||
             this._animationTyep === "rotateInUpRight" ||
-            this._animationTyep === "rotateOutDownRight"
+            this._animationTyep === "rotateOutDownRight" ||
+            this._animationTyep === "rotateOutUpRight"
         ) {
             this._ctx.translate(this._width / 2, this._height / 2);
         }

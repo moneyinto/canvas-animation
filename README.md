@@ -118,8 +118,8 @@
 - [x] rotateOut
 - [x] rotateOutDownLeft
 - [x] rotateOutDownRight
-- [ ] rotateOutUpLeft
-- [ ] rotateOutUpRight
+- [x] rotateOutUpLeft
+- [x] rotateOutUpRight
 
 ### Specials
 - [ ] hinge
