@@ -841,6 +841,42 @@ export const animationStatus: IAnimationStatus = {
             originScale: [0.995, 1],
             scale: [1, 1]
         }
+    ],
+    bounceInRight: [
+        {
+            ...baseKeyframe,
+            range: [0, 70],
+            originTranslate: [2000, 0],
+            translate: [-25, 0],
+            originScale: [3, 1],
+            scale: [1, 1],
+            originOpacity: 0,
+            opacity: 1
+        },
+        {
+            ...baseKeyframe,
+            range: [70, 80],
+            originTranslate: [-25, 0],
+            translate: [10, 0],
+            originScale: [1, 1],
+            scale: [0.98, 1]
+        },
+        {
+            ...baseKeyframe,
+            range: [80, 90],
+            originTranslate: [10, 0],
+            translate: [-5, 0],
+            originScale: [0.98, 1],
+            scale: [0.995, 1]
+        },
+        {
+            ...baseKeyframe,
+            range: [90, 100],
+            originTranslate: [-5, 0],
+            translate: [0, 0],
+            originScale: [0.995, 1],
+            scale: [1, 1]
+        }
     ]
 };
 

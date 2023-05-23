@@ -54,7 +54,7 @@
 - [x] bounceIn
 - [x] bounceInDown
 - [x] bounceInLeft
-- [ ] bounceInRight
+- [x] bounceInRight
 - [ ] bounceInUp
 
 ### Bouncing exits
