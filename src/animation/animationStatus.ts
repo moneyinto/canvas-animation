@@ -148,6 +148,130 @@ export const animationStatus: IAnimationStatus = {
             originScale: [1.05, 0.95],
             scale: [1, 1]
         }
+    ],
+    shakeX: [
+        {
+            ...baseKeyframe,
+            range: [0, 10],
+            originTranslate: [0, 0],
+            translate: [-10, 0]
+        },
+        {
+            ...baseKeyframe,
+            range: [10, 20],
+            originTranslate: [-10, 0],
+            translate: [10, 0]
+        },
+        {
+            ...baseKeyframe,
+            range: [20, 30],
+            originTranslate: [10, 0],
+            translate: [-10, 0]
+        },
+        {
+            ...baseKeyframe,
+            range: [30, 40],
+            originTranslate: [-10, 0],
+            translate: [10, 0]
+        },
+        {
+            ...baseKeyframe,
+            range: [40, 50],
+            originTranslate: [10, 0],
+            translate: [-10, 0]
+        },
+        {
+            ...baseKeyframe,
+            range: [50, 60],
+            originTranslate: [-10, 0],
+            translate: [10, 0]
+        },
+        {
+            ...baseKeyframe,
+            range: [60, 70],
+            originTranslate: [10, 0],
+            translate: [-10, 0]
+        },
+        {
+            ...baseKeyframe,
+            range: [70, 80],
+            originTranslate: [-10, 0],
+            translate: [10, 0]
+        },
+        {
+            ...baseKeyframe,
+            range: [80, 90],
+            originTranslate: [10, 0],
+            translate: [-10, 0]
+        },
+        {
+            ...baseKeyframe,
+            range: [90, 100],
+            originTranslate: [-10, 0],
+            translate: [0, 0]
+        }
+    ],
+    shakeY: [
+        {
+            ...baseKeyframe,
+            range: [0, 10],
+            originTranslate: [0, 0],
+            translate: [0, -10]
+        },
+        {
+            ...baseKeyframe,
+            range: [10, 20],
+            originTranslate: [0, -10],
+            translate: [0, 10]
+        },
+        {
+            ...baseKeyframe,
+            range: [20, 30],
+            originTranslate: [0, 10],
+            translate: [0, -10]
+        },
+        {
+            ...baseKeyframe,
+            range: [30, 40],
+            originTranslate: [0, -10],
+            translate: [0, 10]
+        },
+        {
+            ...baseKeyframe,
+            range: [40, 50],
+            originTranslate: [0, 10],
+            translate: [0, -10]
+        },
+        {
+            ...baseKeyframe,
+            range: [50, 60],
+            originTranslate: [0, -10],
+            translate: [0, 10]
+        },
+        {
+            ...baseKeyframe,
+            range: [60, 70],
+            originTranslate: [0, 10],
+            translate: [0, -10]
+        },
+        {
+            ...baseKeyframe,
+            range: [70, 80],
+            originTranslate: [0, -10],
+            translate: [0, 10]
+        },
+        {
+            ...baseKeyframe,
+            range: [80, 90],
+            originTranslate: [0, 10],
+            translate: [0, -10]
+        },
+        {
+            ...baseKeyframe,
+            range: [90, 100],
+            originTranslate: [0, -10],
+            translate: [0, 0]
+        }
     ]
 };
 
