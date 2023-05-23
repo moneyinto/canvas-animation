@@ -46,7 +46,7 @@
 
 ### Back exits
 - [x] backOutDown
-- [ ] backOutLeft
+- [x] backOutLeft
 - [ ] backOutRight
 - [ ] backOutUp
 
