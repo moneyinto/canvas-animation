@@ -115,6 +115,28 @@ const animationStatus: IAnimationStatus = {
             opacity: 1,
             change: true
         }
+    ],
+    pulse: [
+        {
+            range: [0, 50],
+            baseTranslate: [0, 0],
+            translate: [0, 0],
+            baseScale: [1, 1],
+            scale: [1.05, 1.05],
+            baseOpacity: 1,
+            opacity: 1,
+            change: true
+        },
+        {
+            range: [50, 100],
+            baseTranslate: [0, 0],
+            translate: [0, 0],
+            baseScale: [1.05, 1.05],
+            scale: [1, 1],
+            baseOpacity: 1,
+            opacity: 1,
+            change: true
+        }
     ]
 };
 
