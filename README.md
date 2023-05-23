@@ -99,7 +99,7 @@
 - [x] flipInX
 - [x] flipInY
 - [x] flipOutX
-- [ ] flipOutY
+- [x] flipOutY
 
 ### Lightspeed
 - [ ] lightSpeedInRight

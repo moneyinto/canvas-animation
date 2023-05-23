@@ -1380,6 +1380,23 @@ export const animationStatus: IAnimationStatus = {
         {
             ...baseKeyframe,
             range: [40, 100],
+            opacity: 0,
+            change: false
+        }
+    ],
+    flipOutY: [
+        {
+            ...baseKeyframe,
+            range: [0, 40],
+            originScale: [1, 1],
+            scale: [0, 1],
+            originOpacity: 1,
+            opacity: 0
+        },
+        {
+            ...baseKeyframe,
+            range: [40, 100],
+            opacity: 0,
             change: false
         }
     ]
