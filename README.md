@@ -110,8 +110,8 @@
 ### Rotating entrances
 - [x] rotateIn
 - [x] rotateInDownLeft
-- [ ] rotateInDownRight
-- [ ] rotateInUpLeft
+- [x] rotateInDownRight
+- [x] rotateInUpLeft
 - [ ] rotateInUpRight
 
 ### Rotating exits

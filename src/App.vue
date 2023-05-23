@@ -107,7 +107,7 @@ const clearRect = () => {
 
 const drawAnimationText = (ctx: CanvasRenderingContext2D, text: string, x: number, y: number) => {
     ctx.save();
-    if (animationType === "rotateInDownLeft") {
+    if (animationType === "rotateInDownLeft" || animationType === "rotateInUpLeft") {
         ctx.fillText(text, x + actualWidth / 2, y + actualHeight / 2);
     } else if (animationType === "rotateInDownRight") {
         ctx.fillText(text, x - actualWidth / 2, y + actualHeight / 2);
