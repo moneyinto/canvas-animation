@@ -11,7 +11,6 @@
         "noEmit": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
-        "noImplicitReturns": true,
         "skipLibCheck": true,
         "baseUrl": "./",
         "noImplicitAny": false,

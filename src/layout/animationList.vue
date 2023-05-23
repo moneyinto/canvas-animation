@@ -30,7 +30,7 @@ const selectAnimation = (animation: string, duration: number) => {
 
 <style>
 .animation-list {
-    padding: 25px 15px;
+    padding: 50px 15px 25px;
     height: 100%;
     overflow-y: auto;
     user-select: none;

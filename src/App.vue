@@ -1,5 +1,8 @@
 <template>
     <div class="canvas-animation-body">
+        <div class="github-block">
+            <GithubOutlined class="github-icon" @click="openGithub" />
+        </div>
         <div ref="canvasContainer" class="canvas-container">
             <canvas ref="canvas"></canvas>
         </div>
@@ -13,6 +16,9 @@
 import { nextTick, onMounted, onUnmounted, ref } from "vue";
 import AnimationList from "./layout/animationList.vue";
 import CanvasAnimation from "./animation";
+import { animationStatus } from "./animation/animationStatus";
+import { message } from "ant-design-vue";
+import { GithubOutlined } from "@ant-design/icons-vue";
 
 const canvasContainer = ref<HTMLDivElement>();
 const canvas = ref<HTMLCanvasElement>();
@@ -39,6 +45,9 @@ nextTick(() => {
 
 const selectAnimation = (type: string, duration: number) => {
     console.log(type, duration);
+    if (!animationStatus[type]) {
+        return message.error("该动画暂未实现");
+    }
     animation.setOptions({
         type,
         duration
@@ -91,6 +100,10 @@ const drawAnimationText = (ctx: CanvasRenderingContext2D, text: string, x: numbe
     ctx.restore();
 };
 
+const openGithub = () => {
+    window.open("https://github.com/moneyinto/canvas-animation");
+};
+
 onMounted(() => {
     window.addEventListener("resize", resizeCanvas);
 });
@@ -125,5 +138,31 @@ onUnmounted(() => {
 .canvas-animation-list {
     width: 280px;
     background-color: #f7d7b5;
+}
+
+.github-block {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: #181717;
+    top: -75px;
+    left: -75px;
+    transform: rotate(45deg);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 15px;
+    .github-icon {
+        font-size: 36px;
+        transform: rotate(-45deg);
+        color: white;
+        cursor: pointer;
+        transition: .3s ease-in-out all;
+        margin-top: 5px;
+        &:hover {
+            transform: scale(1.2) rotate(-45deg);
+        }
+    }
 }
 </style>

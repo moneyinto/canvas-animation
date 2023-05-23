@@ -11,7 +11,7 @@ const baseKeyframe: IKeyframe = {
     change: true
 };
 
-const animationStatus: IAnimationStatus = {
+export const animationStatus: IAnimationStatus = {
     bounce: [
         {
             ...baseKeyframe,

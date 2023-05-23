@@ -17,6 +17,7 @@
         "url": "https://github.com/moneyinto/canvas-animation/issues"
     },
     "dependencies": {
+        "@ant-design/icons-vue": "^6.1.0",
         "ant-design-vue": "^3.2.20",
         "vue": "^3.3.4"
     },
