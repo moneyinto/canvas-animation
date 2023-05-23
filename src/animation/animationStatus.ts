@@ -1337,6 +1337,21 @@ export const animationStatus: IAnimationStatus = {
             originScale: [-1.5, 1.5],
             scale: [1, 1]
         }
+    ],
+    flipInX: [
+        {
+            ...baseKeyframe,
+            range: [0, 40],
+            originScale: [1, 0],
+            scale: [1, 1],
+            originOpacity: 0,
+            opacity: 1
+        },
+        {
+            ...baseKeyframe,
+            range: [40, 100],
+            change: false
+        }
     ]
 };
 
