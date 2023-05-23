@@ -40,13 +40,17 @@ nextTick(() => {
                 animation = new CanvasAnimation(context, () => {
                     drawAnimationText(context, text, x, y);
                 }, clearRect);
+
+                animation.onEnd = () => {
+                    clearRect();
+                    drawAnimationText(context, text, x, y);
+                };
             }
         });
     }
 });
 
 const selectAnimation = (type: string, duration: number) => {
-    console.log(type, duration);
     if (!animationStatus[type]) {
         return message.error("该动画暂未实现");
     }

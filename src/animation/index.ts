@@ -10,6 +10,8 @@ export default class CanvasAnimation {
     private _clearRect: () => void;
     private _progressing: boolean;
     private _width: number;
+
+    public onEnd: () => void = () => {};
     constructor(ctx: CanvasRenderingContext2D, draw: () => void, clearRect: () => void) {
         this._ctx = ctx;
         this._duration = 0;
@@ -40,6 +42,7 @@ export default class CanvasAnimation {
         const duration = Date.now() - this._startTime;
         if (duration > this._duration) {
             this._progressing = false;
+            this.onEnd();
             return;
         }
         const animationStatus = getAnimationStatus(

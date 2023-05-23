@@ -649,6 +649,26 @@ export const animationStatus: IAnimationStatus = {
             originScale: [0.7, 0.7],
             scale: [1, 1]
         }
+    ],
+    backOutDown: [
+        {
+            ...baseKeyframe,
+            range: [0, 20],
+            originOpacity: 1,
+            opacity: 0.7,
+            originScale: [1, 1],
+            scale: [0.7, 0.7]
+        },
+        {
+            ...baseKeyframe,
+            range: [20, 100],
+            originTranslate: [0, 0],
+            translate: [0, 1200],
+            originOpacity: 0.7,
+            opacity: 0.7,
+            originScale: [0.7, 0.7],
+            scale: [0.7, 0.7]
+        }
     ]
 };
 
