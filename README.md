@@ -42,7 +42,7 @@
 - [x] backInDown
 - [x] backInLeft
 - [x] backInRight
-- [ ] backInUp
+- [x] backInUp
 
 ### Back exits
 - [ ] backOutDown
