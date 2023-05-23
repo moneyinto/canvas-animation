@@ -97,7 +97,7 @@
 ### Flippers
 - [x] flip
 - [x] flipInX
-- [ ] flipInY
+- [x] flipInY
 - [ ] flipOutX
 - [ ] flipOutY
 

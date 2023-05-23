@@ -1352,6 +1352,21 @@ export const animationStatus: IAnimationStatus = {
             range: [40, 100],
             change: false
         }
+    ],
+    flipInY: [
+        {
+            ...baseKeyframe,
+            range: [0, 40],
+            originScale: [0, 1],
+            scale: [1, 1],
+            originOpacity: 0,
+            opacity: 1
+        },
+        {
+            ...baseKeyframe,
+            range: [40, 100],
+            change: false
+        }
     ]
 };
 
