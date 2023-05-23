@@ -913,6 +913,34 @@ export const animationStatus: IAnimationStatus = {
             originScale: [1, 0.985],
             scale: [1, 1]
         }
+    ],
+    bounceOut: [
+        {
+            ...baseKeyframe,
+            range: [0, 20],
+            originScale: [1, 1],
+            scale: [0.9, 0.9]
+        },
+        {
+            ...baseKeyframe,
+            range: [20, 50],
+            originScale: [0.9, 0.9],
+            scale: [1.1, 1.1]
+        },
+        {
+            ...baseKeyframe,
+            range: [50, 55],
+            scale: [1.1, 1.1],
+            change: false
+        },
+        {
+            ...baseKeyframe,
+            range: [55, 100],
+            originScale: [1.1, 1.1],
+            scale: [0.3, 0.3],
+            originOpacity: 1,
+            opacity: 0
+        }
     ]
 };
 
@@ -929,8 +957,8 @@ export const getAnimationStatus = (type: string, process: number, width: number)
             translate: keyframe.translate,
             scale: keyframe.scale,
             opacity: keyframe.opacity,
-            rotate: 0,
-            skew: [0, 0]
+            rotate: keyframe.rotate,
+            skew: keyframe.skew
         };
     }
     const range = keyframe.range[1] - keyframe.range[0];
