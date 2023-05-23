@@ -51,7 +51,7 @@
 - [x] backOutUp
 
 ### Bouncing entrances
-- [ ] bounceIn
+- [x] bounceIn
 - [ ] bounceInDown
 - [ ] bounceInLeft
 - [ ] bounceInRight
