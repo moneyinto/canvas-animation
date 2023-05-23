@@ -98,7 +98,7 @@
 - [x] flip
 - [x] flipInX
 - [x] flipInY
-- [ ] flipOutX
+- [x] flipOutX
 - [ ] flipOutY
 
 ### Lightspeed
