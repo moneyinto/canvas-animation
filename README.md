@@ -20,6 +20,9 @@
 # CANVAS-ANIMATION
 > Canvas 实现 [Animate.css](https://animate.style/) 的动画效果。
 
+##### 在线体验地址：[https://demo.money-into.com/canvas-animation/](https://demo.money-into.com/canvas-animation/)
+
+
 # 功能列表
 ### Attention seekers
 - [x] bounce
