@@ -124,7 +124,7 @@
 ### Specials
 - [x] hinge
 - [x] jackInTheBox
-- [ ] rollIn
+- [x] rollIn
 - [ ] rollOut
 
 ### Zooming entrances
