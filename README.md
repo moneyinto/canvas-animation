@@ -82,7 +82,7 @@
 ### Fading exits
 - [x] fadeOut
 - [x] fadeOutDown
-- [ ] fadeOutDownBig
+- [x] fadeOutDownBig
 - [ ] fadeOutLeft
 - [ ] fadeOutLeftBig
 - [ ] fadeOutRight
