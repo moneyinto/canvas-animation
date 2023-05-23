@@ -105,7 +105,7 @@
 - [x] lightSpeedInRight
 - [x] lightSpeedInLeft
 - [x] lightSpeedOutRight
-- [ ] lightSpeedOutLeft
+- [x] lightSpeedOutLeft
 
 ### Rotating entrances
 - [ ] rotateIn

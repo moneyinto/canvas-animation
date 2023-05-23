@@ -1462,6 +1462,19 @@ export const animationStatus: IAnimationStatus = {
             originSkew: [0, 0],
             skew: [0, 30]
         }
+    ],
+    lightSpeedOutLeft: [
+        {
+            ...baseKeyframe,
+            range: [0, 100],
+            translatePercentage: true,
+            originTranslate: [0, 0],
+            translate: [-100, 0],
+            originOpacity: 1,
+            opacity: 0,
+            originSkew: [0, 0],
+            skew: [0, -30]
+        }
     ]
 };
 
