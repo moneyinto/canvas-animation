@@ -1301,6 +1301,17 @@ export const animationStatus: IAnimationStatus = {
             originOpacity: 1,
             opacity: 0
         }
+    ],
+    fadeOutBottomLeft: [
+        {
+            ...baseKeyframe,
+            range: [0, 100],
+            translatePercentage: true,
+            originTranslate: [0, 0],
+            translate: [-100, 100],
+            originOpacity: 1,
+            opacity: 0
+        }
     ]
 };
 

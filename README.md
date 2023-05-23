@@ -91,7 +91,7 @@
 - [x] fadeOutUpBig
 - [x] fadeOutTopLeft
 - [x] fadeOutTopRight
-- [ ] fadeOutBottomRight
+- [x] fadeOutBottomRight
 - [ ] fadeOutBottomLeft
 
 ### Flippers
