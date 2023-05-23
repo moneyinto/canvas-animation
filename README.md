@@ -112,10 +112,10 @@
 - [x] rotateInDownLeft
 - [x] rotateInDownRight
 - [x] rotateInUpLeft
-- [ ] rotateInUpRight
+- [x] rotateInUpRight
 
 ### Rotating exits
-- [ ] rotateOut
+- [x] rotateOut
 - [ ] rotateOutDownLeft
 - [ ] rotateOutDownRight
 - [ ] rotateOutUpLeft
