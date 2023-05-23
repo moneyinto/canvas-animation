@@ -40,7 +40,7 @@
 
 ### Back entrances
 - [x] backInDown
-- [ ] backInLeft
+- [x] backInLeft
 - [ ] backInRight
 - [ ] backInUp
 
