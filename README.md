@@ -80,7 +80,7 @@
 - [x] fadeInBottomRight
 
 ### Fading exits
-- [ ] fadeOut
+- [x] fadeOut
 - [ ] fadeOutDown
 - [ ] fadeOutDownBig
 - [ ] fadeOutLeft
