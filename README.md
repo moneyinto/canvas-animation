@@ -33,7 +33,7 @@
 - [x] shakeY
 - [x] headShake
 - [x] swing
-- [ ] tada
+- [x] tada
 - [ ] wobble
 - [ ] jello
 - [ ] heartBeat
@@ -156,3 +156,4 @@
 # 问题
 - 绕轴旋转实现问题
 - 旋转中心点 目前固定为矩形中心
+- 缩放 缺少z轴方向的

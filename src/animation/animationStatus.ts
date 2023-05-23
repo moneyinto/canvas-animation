@@ -343,6 +343,88 @@ export const animationStatus: IAnimationStatus = {
             originRotate: -5,
             rotate: 0
         }
+    ],
+    tada: [
+        {
+            ...baseKeyframe,
+            range: [0, 10],
+            originScale: [1, 1],
+            scale: [0.9, 0.9],
+            originRotate: 0,
+            rotate: -3
+        },
+        {
+            ...baseKeyframe,
+            range: [10, 20],
+            originScale: [0.9, 0.9],
+            scale: [0.9, 0.9],
+            originRotate: -3,
+            rotate: -3
+        },
+        {
+            ...baseKeyframe,
+            range: [20, 30],
+            originScale: [0.9, 0.9],
+            scale: [1.1, 1.1],
+            originRotate: -3,
+            rotate: 3
+        },
+        {
+            ...baseKeyframe,
+            range: [30, 40],
+            originScale: [1.1, 1.1],
+            scale: [1.1, 1.1],
+            originRotate: 3,
+            rotate: -3
+        },
+        {
+            ...baseKeyframe,
+            range: [40, 50],
+            originScale: [1.1, 1.1],
+            scale: [1.1, 1.1],
+            originRotate: -3,
+            rotate: 3
+        },
+        {
+            ...baseKeyframe,
+            range: [50, 60],
+            originScale: [1.1, 1.1],
+            scale: [1.1, 1.1],
+            originRotate: 3,
+            rotate: -3
+        },
+        {
+            ...baseKeyframe,
+            range: [60, 70],
+            originScale: [1.1, 1.1],
+            scale: [1.1, 1.1],
+            originRotate: -3,
+            rotate: 3
+        },
+        {
+            ...baseKeyframe,
+            range: [70, 80],
+            originScale: [1.1, 1.1],
+            scale: [1.1, 1.1],
+            originRotate: 3,
+            rotate: -3
+        },
+        {
+            ...baseKeyframe,
+            range: [80, 90],
+            originScale: [1.1, 1.1],
+            scale: [1.1, 1.1],
+            originRotate: -3,
+            rotate: 3
+        },
+        {
+            ...baseKeyframe,
+            range: [90, 100],
+            originScale: [1.1, 1.1],
+            scale: [1, 1],
+            originRotate: 3,
+            rotate: 0
+        }
     ]
 };
 
