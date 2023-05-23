@@ -25,6 +25,8 @@ const canvas = ref<HTMLCanvasElement>();
 const ctx = ref<CanvasRenderingContext2D>();
 let animation: CanvasAnimation;
 const text = "Animate.css";
+let actualWidth = 0;
+let actualHeight = 0;
 let x = 0;
 let y = 0;
 nextTick(() => {
@@ -50,7 +52,8 @@ const selectAnimation = (type: string, duration: number) => {
     }
     animation.setOptions({
         type,
-        duration
+        duration,
+        width: actualWidth
     });
     animation.start();
 };
@@ -77,8 +80,8 @@ const resizeCanvas = () => {
         ctx.value.font = "normal bold 64px 'Work Sans'";
         ctx.value.fillStyle = "#351c75";
         const metrics = ctx.value.measureText(text);
-        const actualWidth = metrics.actualBoundingBoxRight - metrics.actualBoundingBoxLeft;
-        const actualHeight = metrics.actualBoundingBoxAscent + metrics.actualBoundingBoxDescent;
+        actualWidth = metrics.actualBoundingBoxRight - metrics.actualBoundingBoxLeft;
+        actualHeight = metrics.actualBoundingBoxAscent + metrics.actualBoundingBoxDescent;
         x = -actualWidth / 2;
         y = actualHeight / 2;
         ctx.value.translate(width / 2, height / 2);

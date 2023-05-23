@@ -34,7 +34,7 @@
 - [x] headShake
 - [x] swing
 - [x] tada
-- [ ] wobble
+- [x] wobble
 - [ ] jello
 - [ ] heartBeat
 

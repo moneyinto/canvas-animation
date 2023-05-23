@@ -1,10 +1,12 @@
 export interface IAnimationOptions {
     type: string;
     duration: number;
+    width?: number;
 }
 
 export interface IKeyframe {
     range: [number, number];
+    translatePercentage?: boolean;
     originTranslate?: [number, number];
     translate: [number, number];
     originScale?: [number, number];

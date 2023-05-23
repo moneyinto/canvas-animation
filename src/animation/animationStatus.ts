@@ -425,10 +425,66 @@ export const animationStatus: IAnimationStatus = {
             originRotate: 3,
             rotate: 0
         }
+    ],
+    wobble: [
+        {
+            ...baseKeyframe,
+            range: [0, 15],
+            translatePercentage: true,
+            originTranslate: [0, 0],
+            translate: [-25, 0],
+            originRotate: 0,
+            rotate: -5
+        },
+        {
+            ...baseKeyframe,
+            range: [15, 30],
+            translatePercentage: true,
+            originTranslate: [-25, 0],
+            translate: [20, 0],
+            originRotate: -5,
+            rotate: 3
+        },
+        {
+            ...baseKeyframe,
+            range: [30, 45],
+            translatePercentage: true,
+            originTranslate: [20, 0],
+            translate: [-15, 0],
+            originRotate: 3,
+            rotate: -3
+        },
+        {
+            ...baseKeyframe,
+            range: [45, 60],
+            translatePercentage: true,
+            originTranslate: [-15, 0],
+            translate: [10, 0],
+            originRotate: -3,
+            rotate: 2
+        },
+        {
+            ...baseKeyframe,
+            range: [60, 75],
+            translatePercentage: true,
+            originTranslate: [10, 0],
+            translate: [-5, 0],
+            originRotate: 2,
+            rotate: -1
+        },
+        {
+            ...baseKeyframe,
+            range: [75, 100],
+            translatePercentage: true,
+            originTranslate: [-5, 0],
+            translate: [0, 0],
+            originRotate: -1,
+            rotate: 0
+        }
     ]
 };
 
-export const getAnimationStatus = (type: string, process: number) => {
+export const getAnimationStatus = (type: string, process: number, width: number) => {
     const keyframes = animationStatus[type];
 
     const keyframeIndex = keyframes.findIndex((keyframe) => {
@@ -448,8 +504,8 @@ export const getAnimationStatus = (type: string, process: number) => {
     const processInKeyframe = process - keyframe.range[0];
     const processPercent = processInKeyframe / range;
     const translate: [number, number] = [
-        (keyframe.translate[0] - keyframe.originTranslate![0]) * processPercent + keyframe.originTranslate![0],
-        (keyframe.translate[1] - keyframe.originTranslate![1]) * processPercent + keyframe.originTranslate![1]
+        ((keyframe.translate[0] - keyframe.originTranslate![0]) * processPercent + keyframe.originTranslate![0]) * (keyframe.translatePercentage ? 0.01 * width : 1),
+        ((keyframe.translate[1] - keyframe.originTranslate![1]) * processPercent + keyframe.originTranslate![1]) * (keyframe.translatePercentage ? 0.01 * width : 1)
     ];
     const scale: [number, number] = [
         (keyframe.scale[0] - keyframe.originScale![0]) * processPercent + keyframe.originScale![0],
