@@ -117,7 +117,7 @@
 ### Rotating exits
 - [x] rotateOut
 - [x] rotateOutDownLeft
-- [ ] rotateOutDownRight
+- [x] rotateOutDownRight
 - [ ] rotateOutUpLeft
 - [ ] rotateOutUpRight
 

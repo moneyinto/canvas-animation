@@ -129,9 +129,10 @@ const drawAnimationText = (
         ctx.fillText(text, x + actualWidth / 2, y - actualHeight / 2);
     } else if (
         animationType === "rotateInDownRight" ||
-        animationType === "rotateInUpRight"
+        animationType === "rotateInUpRight" ||
+        animationType === "rotateOutDownRight"
     ) {
-        ctx.fillText(text, x - actualWidth / 2, y + actualHeight / 2);
+        ctx.fillText(text, x - actualWidth / 2, y - actualHeight / 2);
     } else {
         ctx.fillText(text, x, y);
     }
