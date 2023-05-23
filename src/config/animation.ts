@@ -48,7 +48,7 @@ export const ANIMATION_LIST = [
             },
             {
                 name: "heartBeat",
-                duration: 1000
+                duration: 1300
             }
         ]
     },

@@ -538,6 +538,37 @@ export const animationStatus: IAnimationStatus = {
             originSkew: [-0.1953125, -0.1953125],
             skew: [0, 0]
         }
+    ],
+    heartBeat: [
+        {
+            ...baseKeyframe,
+            range: [0, 14],
+            originScale: [1, 1],
+            scale: [1.3, 1.3]
+        },
+        {
+            ...baseKeyframe,
+            range: [14, 28],
+            originScale: [1.3, 1.3],
+            scale: [1, 1]
+        },
+        {
+            ...baseKeyframe,
+            range: [28, 42],
+            originScale: [1, 1],
+            scale: [1.3, 1.3]
+        },
+        {
+            ...baseKeyframe,
+            range: [42, 70],
+            originScale: [1.3, 1.3],
+            scale: [1, 1]
+        },
+        {
+            ...baseKeyframe,
+            range: [70, 100],
+            change: false
+        }
     ]
 };
 
