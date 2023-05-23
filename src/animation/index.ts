@@ -10,6 +10,7 @@ export default class CanvasAnimation {
     private _clearRect: () => void;
     private _progressing: boolean;
     private _width: number;
+    private _height: number;
 
     public onEnd: () => void = () => {};
     constructor(ctx: CanvasRenderingContext2D, draw: () => void, clearRect: () => void) {
@@ -21,12 +22,14 @@ export default class CanvasAnimation {
         this._clearRect = clearRect;
         this._progressing = false;
         this._width = 100;
+        this._height = 100;
     }
 
     setOptions(options: IAnimationOptions) {
         this._animationTyep = options.type;
         this._duration = options.duration;
         this._width = options.width || 100;
+        this._height = options.height || 100;
     }
 
     public start() {
@@ -48,7 +51,8 @@ export default class CanvasAnimation {
         const animationStatus = getAnimationStatus(
             this._animationTyep,
             duration / this._duration * 100,
-            this._width
+            this._width,
+            this._height
         );
         this._clearRect();
         this._ctx.save();

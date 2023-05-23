@@ -1059,10 +1059,21 @@ export const animationStatus: IAnimationStatus = {
             originOpacity: 0,
             opacity: 1
         }
+    ],
+    fadeInDown: [
+        {
+            ...baseKeyframe,
+            range: [0, 100],
+            translatePercentage: true,
+            originTranslate: [0, -100],
+            translate: [0, 0],
+            originOpacity: 0,
+            opacity: 1
+        }
     ]
 };
 
-export const getAnimationStatus = (type: string, process: number, width: number) => {
+export const getAnimationStatus = (type: string, process: number, width: number, height: number) => {
     const keyframes = animationStatus[type];
 
     const keyframeIndex = keyframes.findIndex((keyframe) => {
@@ -1084,7 +1095,7 @@ export const getAnimationStatus = (type: string, process: number, width: number)
     const processPercent = processInKeyframe / range;
     const translate: [number, number] = [
         ((keyframe.translate[0] - keyframe.originTranslate![0]) * processPercent + keyframe.originTranslate![0]) * (keyframe.translatePercentage ? 0.01 * width : 1),
-        ((keyframe.translate[1] - keyframe.originTranslate![1]) * processPercent + keyframe.originTranslate![1]) * (keyframe.translatePercentage ? 0.01 * width : 1)
+        ((keyframe.translate[1] - keyframe.originTranslate![1]) * processPercent + keyframe.originTranslate![1]) * (keyframe.translatePercentage ? 0.01 * height : 1)
     ];
     const scale: [number, number] = [
         (keyframe.scale[0] - keyframe.originScale![0]) * processPercent + keyframe.originScale![0],

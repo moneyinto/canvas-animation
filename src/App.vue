@@ -57,7 +57,8 @@ const selectAnimation = (type: string, duration: number) => {
     animation.setOptions({
         type,
         duration,
-        width: actualWidth
+        width: actualWidth,
+        height: actualHeight
     });
     animation.start();
 };

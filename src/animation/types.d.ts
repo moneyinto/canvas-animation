@@ -2,6 +2,7 @@ export interface IAnimationOptions {
     type: string;
     duration: number;
     width?: number;
+    height?: number;
 }
 
 export interface IKeyframe {
