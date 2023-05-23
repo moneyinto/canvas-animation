@@ -1554,11 +1554,33 @@ export const animationStatus: IAnimationStatus = {
     rotateOut: [
         {
             ...baseKeyframe,
-            range: [0, 100],
+            range: [0, 70],
             originRotate: 0,
             rotate: 200,
             originOpacity: 1,
             opacity: 0
+        },
+        {
+            ...baseKeyframe,
+            range: [70, 100],
+            opacity: 0,
+            change: false
+        }
+    ],
+    rotateOutDownLeft: [
+        {
+            ...baseKeyframe,
+            range: [0, 70],
+            originRotate: 0,
+            rotate: 45,
+            originOpacity: 1,
+            opacity: 0
+        },
+        {
+            ...baseKeyframe,
+            range: [70, 100],
+            opacity: 0,
+            change: false
         }
     ]
 };

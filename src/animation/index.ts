@@ -13,7 +13,11 @@ export default class CanvasAnimation {
     private _height: number;
 
     public onEnd: () => void = () => {};
-    constructor(ctx: CanvasRenderingContext2D, draw: () => void, clearRect: () => void) {
+    constructor(
+        ctx: CanvasRenderingContext2D,
+        draw: () => void,
+        clearRect: () => void
+    ) {
         this._ctx = ctx;
         this._duration = 0;
         this._startTime = 0;
@@ -50,22 +54,36 @@ export default class CanvasAnimation {
         }
         const animationStatus = getAnimationStatus(
             this._animationTyep,
-            duration / this._duration * 100,
+            (duration / this._duration) * 100,
             this._width,
             this._height
         );
         this._clearRect();
         this._ctx.save();
-        if (this._animationTyep === "rotateInDownLeft" || this._animationTyep === "rotateInUpLeft") {
-            this._ctx.translate(-this._width / 2, -this._height / 2);
-        } else if (this._animationTyep === "rotateInDownRight" || this._animationTyep === "rotateInUpRight") {
+        if (
+            this._animationTyep === "rotateInDownLeft" ||
+            this._animationTyep === "rotateInUpLeft" ||
+            this._animationTyep === "rotateOutDownLeft"
+        ) {
+            this._ctx.translate(-this._width / 2, this._height / 2);
+        } else if (
+            this._animationTyep === "rotateInDownRight" ||
+            this._animationTyep === "rotateInUpRight"
+        ) {
             this._ctx.translate(this._width / 2, -this._height / 2);
         }
         this._ctx.scale(...animationStatus.scale);
         this._ctx.translate(...animationStatus.translate);
         this._ctx.globalAlpha = animationStatus.opacity;
-        this._ctx.rotate(animationStatus.rotate * Math.PI / 180);
-        this._ctx.transform(1, animationStatus.skew[0] * Math.PI / 180, animationStatus.skew[1] * Math.PI / 180, 1, 0, 0);
+        this._ctx.rotate((animationStatus.rotate * Math.PI) / 180);
+        this._ctx.transform(
+            1,
+            (animationStatus.skew[0] * Math.PI) / 180,
+            (animationStatus.skew[1] * Math.PI) / 180,
+            1,
+            0,
+            0
+        );
         this._draw();
         this._ctx.restore();
         window.requestAnimationFrame(this._action.bind(this));

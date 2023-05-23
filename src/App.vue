@@ -38,9 +38,13 @@ nextTick(() => {
 
             if (ctx.value) {
                 const context = ctx.value;
-                animation = new CanvasAnimation(context, () => {
-                    drawAnimationText(context, text, x, y);
-                }, clearRect);
+                animation = new CanvasAnimation(
+                    context,
+                    () => {
+                        drawAnimationText(context, text, x, y);
+                    },
+                    clearRect
+                );
 
                 animation.onEnd = () => {
                     animationType = "";
@@ -101,15 +105,32 @@ const clearRect = () => {
     if (canvas.value && ctx.value) {
         const width = canvas.value.clientWidth;
         const height = canvas.value.clientHeight;
-        ctx.value.clearRect(-width / 2, -height / 2, canvas.value!.width, canvas.value!.height);
+        ctx.value.clearRect(
+            -width / 2,
+            -height / 2,
+            canvas.value!.width,
+            canvas.value!.height
+        );
     }
 };
 
-const drawAnimationText = (ctx: CanvasRenderingContext2D, text: string, x: number, y: number) => {
+const drawAnimationText = (
+    ctx: CanvasRenderingContext2D,
+    text: string,
+    x: number,
+    y: number
+) => {
     ctx.save();
-    if (animationType === "rotateInDownLeft" || animationType === "rotateInUpLeft") {
-        ctx.fillText(text, x + actualWidth / 2, y + actualHeight / 2);
-    } else if (animationType === "rotateInDownRight" || animationType === "rotateInUpRight") {
+    if (
+        animationType === "rotateInDownLeft" ||
+        animationType === "rotateInUpLeft" ||
+        animationType === "rotateOutDownLeft"
+    ) {
+        ctx.fillText(text, x + actualWidth / 2, y - actualHeight / 2);
+    } else if (
+        animationType === "rotateInDownRight" ||
+        animationType === "rotateInUpRight"
+    ) {
         ctx.fillText(text, x - actualWidth / 2, y + actualHeight / 2);
     } else {
         ctx.fillText(text, x, y);
@@ -175,7 +196,7 @@ onUnmounted(() => {
         transform: rotate(-45deg);
         color: white;
         cursor: pointer;
-        transition: .3s ease-in-out all;
+        transition: 0.3s ease-in-out all;
         margin-top: 5px;
         &:hover {
             transform: scale(1.2) rotate(-45deg);
