@@ -103,7 +103,7 @@
 
 ### Lightspeed
 - [x] lightSpeedInRight
-- [ ] lightSpeedInLeft
+- [x] lightSpeedInLeft
 - [ ] lightSpeedOutRight
 - [ ] lightSpeedOutLeft
 
