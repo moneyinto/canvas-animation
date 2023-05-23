@@ -1248,6 +1248,16 @@ export const animationStatus: IAnimationStatus = {
             originOpacity: 1,
             opacity: 0
         }
+    ],
+    fadeOutRightBig: [
+        {
+            ...baseKeyframe,
+            range: [0, 100],
+            originTranslate: [0, 0],
+            translate: [2000, 0],
+            originOpacity: 1,
+            opacity: 0
+        }
     ]
 };
 
