@@ -58,7 +58,7 @@ export default class CanvasAnimation {
         this._ctx.save();
         if (this._animationTyep === "rotateInDownLeft" || this._animationTyep === "rotateInUpLeft") {
             this._ctx.translate(-this._width / 2, -this._height / 2);
-        } else if (this._animationTyep === "rotateInDownRight") {
+        } else if (this._animationTyep === "rotateInDownRight" || this._animationTyep === "rotateInUpRight") {
             this._ctx.translate(this._width / 2, -this._height / 2);
         }
         this._ctx.scale(...animationStatus.scale);

@@ -109,7 +109,7 @@ const drawAnimationText = (ctx: CanvasRenderingContext2D, text: string, x: numbe
     ctx.save();
     if (animationType === "rotateInDownLeft" || animationType === "rotateInUpLeft") {
         ctx.fillText(text, x + actualWidth / 2, y + actualHeight / 2);
-    } else if (animationType === "rotateInDownRight") {
+    } else if (animationType === "rotateInDownRight" || animationType === "rotateInUpRight") {
         ctx.fillText(text, x - actualWidth / 2, y + actualHeight / 2);
     } else {
         ctx.fillText(text, x, y);
