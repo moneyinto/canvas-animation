@@ -1505,6 +1505,21 @@ export const animationStatus: IAnimationStatus = {
             range: [70, 100],
             change: false
         }
+    ],
+    rotateInDownRight: [
+        {
+            ...baseKeyframe,
+            range: [0, 70],
+            originRotate: 45,
+            rotate: 0,
+            originOpacity: 0,
+            opacity: 1
+        },
+        {
+            ...baseKeyframe,
+            range: [70, 100],
+            change: false
+        }
     ]
 };
 

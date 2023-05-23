@@ -25,6 +25,7 @@ const canvas = ref<HTMLCanvasElement>();
 const ctx = ref<CanvasRenderingContext2D>();
 let animation: CanvasAnimation;
 const text = "Animate.css";
+let animationType = "";
 let actualWidth = 0;
 let actualHeight = 0;
 let x = 0;
@@ -37,13 +38,14 @@ nextTick(() => {
 
             if (ctx.value) {
                 const context = ctx.value;
-                animation = new CanvasAnimation(context, (isCenter) => {
-                    drawAnimationText(context, text, x, y, isCenter, true);
+                animation = new CanvasAnimation(context, () => {
+                    drawAnimationText(context, text, x, y);
                 }, clearRect);
 
                 animation.onEnd = () => {
+                    animationType = "";
                     clearRect();
-                    drawAnimationText(context, text, x, y, true);
+                    drawAnimationText(context, text, x, y);
                 };
             }
         });
@@ -54,6 +56,7 @@ const selectAnimation = (type: string, duration: number) => {
     if (!animationStatus[type]) {
         return message.error("该动画暂未实现");
     }
+    animationType = type;
     animation.setOptions({
         type,
         duration,
@@ -89,8 +92,8 @@ const resizeCanvas = () => {
         actualHeight = metrics.actualBoundingBoxAscent + metrics.actualBoundingBoxDescent;
         x = -actualWidth / 2;
         y = actualHeight / 2;
-        ctx.value.translate(width / 2 - actualWidth / 2, height / 2 - actualHeight / 2);
-        drawAnimationText(ctx.value, text, x, y, true);
+        ctx.value.translate(width / 2, height / 2);
+        drawAnimationText(ctx.value, text, x, y);
     }
 };
 
@@ -98,19 +101,18 @@ const clearRect = () => {
     if (canvas.value && ctx.value) {
         const width = canvas.value.clientWidth;
         const height = canvas.value.clientHeight;
-        ctx.value.clearRect(-width / 2 + actualWidth / 2, -height / 2 + actualHeight / 2, canvas.value!.width, canvas.value!.height);
+        ctx.value.clearRect(-width / 2, -height / 2, canvas.value!.width, canvas.value!.height);
     }
 };
 
-const drawAnimationText = (ctx: CanvasRenderingContext2D, text: string, x: number, y: number, isCenter: boolean, animation?: boolean) => {
+const drawAnimationText = (ctx: CanvasRenderingContext2D, text: string, x: number, y: number) => {
     ctx.save();
-    if (!animation) {
-        ctx.translate(actualWidth / 2, actualHeight / 2);
-    }
-    if (isCenter) {
-        ctx.fillText(text, x, y);
-    } else {
+    if (animationType === "rotateInDownLeft") {
         ctx.fillText(text, x + actualWidth / 2, y + actualHeight / 2);
+    } else if (animationType === "rotateInDownRight") {
+        ctx.fillText(text, x - actualWidth / 2, y + actualHeight / 2);
+    } else {
+        ctx.fillText(text, x, y);
     }
     ctx.restore();
 };
