@@ -53,7 +53,7 @@
 ### Bouncing entrances
 - [x] bounceIn
 - [x] bounceInDown
-- [ ] bounceInLeft
+- [x] bounceInLeft
 - [ ] bounceInRight
 - [ ] bounceInUp
 
