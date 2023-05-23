@@ -104,7 +104,7 @@
 ### Lightspeed
 - [x] lightSpeedInRight
 - [x] lightSpeedInLeft
-- [ ] lightSpeedOutRight
+- [x] lightSpeedOutRight
 - [ ] lightSpeedOutLeft
 
 ### Rotating entrances
