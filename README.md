@@ -90,7 +90,7 @@
 - [x] fadeOutUp
 - [x] fadeOutUpBig
 - [x] fadeOutTopLeft
-- [ ] fadeOutTopRight
+- [x] fadeOutTopRight
 - [ ] fadeOutBottomRight
 - [ ] fadeOutBottomLeft
 
