@@ -67,7 +67,7 @@
 ### Fading entrances
 - [x] fadeIn
 - [x] fadeInDown
-- [ ] fadeInDownBig
+- [x] fadeInDownBig
 - [ ] fadeInLeft
 - [ ] fadeInLeftBig
 - [ ] fadeInRight
