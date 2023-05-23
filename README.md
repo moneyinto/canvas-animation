@@ -36,10 +36,10 @@
 - [x] tada
 - [x] wobble
 - [x] jello
-- [ ] heartBeat
+- [x] heartBeat
 
 ### Back entrances
-- [ ] backInDown
+- [x] backInDown
 - [ ] backInLeft
 - [ ] backInRight
 - [ ] backInUp
