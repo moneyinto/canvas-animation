@@ -52,7 +52,7 @@
 
 ### Bouncing entrances
 - [x] bounceIn
-- [ ] bounceInDown
+- [x] bounceInDown
 - [ ] bounceInLeft
 - [ ] bounceInRight
 - [ ] bounceInUp
@@ -157,3 +157,4 @@
 - 绕轴旋转实现问题
 - 旋转中心点 目前固定为矩形中心
 - 缩放 缺少z轴方向的
+- 动画时间 cubic-bezier
