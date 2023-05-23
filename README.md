@@ -24,8 +24,8 @@
 ### Attention seekers
 - [x] bounce
 - [x] flash
-- [ ] pulse
-- [ ] rubberBand
+- [x] pulse
+- [x] rubberBand
 - [ ] shakeX
 - [ ] shakeY
 - [ ] headShake

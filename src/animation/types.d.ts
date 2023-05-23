@@ -5,11 +5,11 @@ export interface IAnimationOptions {
 
 export interface IKeyframe {
     range: [number, number];
-    baseTranslate?: [number, number];
+    originTranslate?: [number, number];
     translate: [number, number];
-    baseScale?: [number, number];
+    originScale?: [number, number];
     scale: [number, number];
-    baseOpacity?: number;
+    originOpacity?: number;
     opacity: number;
     change?: boolean;
 }
