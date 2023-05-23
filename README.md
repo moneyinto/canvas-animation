@@ -109,7 +109,7 @@
 
 ### Rotating entrances
 - [x] rotateIn
-- [ ] rotateInDownLeft
+- [x] rotateInDownLeft
 - [ ] rotateInDownRight
 - [ ] rotateInUpLeft
 - [ ] rotateInUpRight

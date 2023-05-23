@@ -37,13 +37,13 @@ nextTick(() => {
 
             if (ctx.value) {
                 const context = ctx.value;
-                animation = new CanvasAnimation(context, () => {
-                    drawAnimationText(context, text, x, y);
+                animation = new CanvasAnimation(context, (isCenter) => {
+                    drawAnimationText(context, text, x, y, isCenter, true);
                 }, clearRect);
 
                 animation.onEnd = () => {
                     clearRect();
-                    drawAnimationText(context, text, x, y);
+                    drawAnimationText(context, text, x, y, true);
                 };
             }
         });
@@ -89,8 +89,8 @@ const resizeCanvas = () => {
         actualHeight = metrics.actualBoundingBoxAscent + metrics.actualBoundingBoxDescent;
         x = -actualWidth / 2;
         y = actualHeight / 2;
-        ctx.value.translate(width / 2, height / 2);
-        drawAnimationText(ctx.value, text, x, y);
+        ctx.value.translate(width / 2 - actualWidth / 2, height / 2 - actualHeight / 2);
+        drawAnimationText(ctx.value, text, x, y, true);
     }
 };
 
@@ -98,13 +98,20 @@ const clearRect = () => {
     if (canvas.value && ctx.value) {
         const width = canvas.value.clientWidth;
         const height = canvas.value.clientHeight;
-        ctx.value.clearRect(-width / 2, -height / 2, canvas.value!.width, canvas.value!.height);
+        ctx.value.clearRect(-width / 2 + actualWidth / 2, -height / 2 + actualHeight / 2, canvas.value!.width, canvas.value!.height);
     }
 };
 
-const drawAnimationText = (ctx: CanvasRenderingContext2D, text: string, x: number, y: number) => {
+const drawAnimationText = (ctx: CanvasRenderingContext2D, text: string, x: number, y: number, isCenter: boolean, animation?: boolean) => {
     ctx.save();
-    ctx.fillText(text, x, y);
+    if (!animation) {
+        ctx.translate(actualWidth / 2, actualHeight / 2);
+    }
+    if (isCenter) {
+        ctx.fillText(text, x, y);
+    } else {
+        ctx.fillText(text, x + actualWidth / 2, y + actualHeight / 2);
+    }
     ctx.restore();
 };
 

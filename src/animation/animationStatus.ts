@@ -1490,6 +1490,21 @@ export const animationStatus: IAnimationStatus = {
             range: [70, 100],
             change: false
         }
+    ],
+    rotateInDownLeft: [
+        {
+            ...baseKeyframe,
+            range: [0, 70],
+            originRotate: -45,
+            rotate: 0,
+            originOpacity: 0,
+            opacity: 1
+        },
+        {
+            ...baseKeyframe,
+            range: [70, 100],
+            change: false
+        }
     ]
 };
 
@@ -1510,6 +1525,7 @@ export const getAnimationStatus = (type: string, process: number, width: number,
             skew: keyframe.skew
         };
     }
+
     const range = keyframe.range[1] - keyframe.range[0];
     const processInKeyframe = process - keyframe.range[0];
     const processPercent = processInKeyframe / range;
