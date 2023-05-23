@@ -8,6 +8,8 @@ const baseKeyframe: IKeyframe = {
     scale: [1, 1],
     originOpacity: 1,
     opacity: 1,
+    originRotate: 0,
+    rotate: 0,
     change: true
 };
 
@@ -272,6 +274,75 @@ export const animationStatus: IAnimationStatus = {
             originTranslate: [0, -10],
             translate: [0, 0]
         }
+    ],
+    headShake: [
+        {
+            ...baseKeyframe,
+            range: [0, 6.5],
+            originTranslate: [0, 0],
+            translate: [-6, 0]
+        },
+        {
+            ...baseKeyframe,
+            range: [6.5, 18.5],
+            originTranslate: [-6, 0],
+            translate: [5, 0]
+        },
+        {
+            ...baseKeyframe,
+            range: [18.5, 31.5],
+            originTranslate: [5, 0],
+            translate: [-3, 0]
+        },
+        {
+            ...baseKeyframe,
+            range: [31.5, 43.5],
+            originTranslate: [-3, 0],
+            translate: [2, 0]
+        },
+        {
+            ...baseKeyframe,
+            range: [43.5, 50],
+            originTranslate: [2, 0],
+            translate: [0, 0]
+        },
+        {
+            ...baseKeyframe,
+            range: [50, 100],
+            change: false
+        }
+    ],
+    swing: [
+        {
+            ...baseKeyframe,
+            range: [0, 20],
+            originRotate: 0,
+            rotate: 15
+        },
+        {
+            ...baseKeyframe,
+            range: [20, 40],
+            originRotate: 15,
+            rotate: -10
+        },
+        {
+            ...baseKeyframe,
+            range: [40, 60],
+            originRotate: -10,
+            rotate: 5
+        },
+        {
+            ...baseKeyframe,
+            range: [60, 80],
+            originRotate: 5,
+            rotate: -5
+        },
+        {
+            ...baseKeyframe,
+            range: [80, 100],
+            originRotate: -5,
+            rotate: 0
+        }
     ]
 };
 
@@ -287,7 +358,8 @@ export const getAnimationStatus = (type: string, process: number) => {
         return {
             translate: keyframe.translate,
             scale: keyframe.scale,
-            opacity: keyframe.opacity
+            opacity: keyframe.opacity,
+            rotate: 0
         };
     }
     const range = keyframe.range[1] - keyframe.range[0];
@@ -304,9 +376,12 @@ export const getAnimationStatus = (type: string, process: number) => {
 
     const opacity = (keyframe.opacity - keyframe.originOpacity!) * processPercent + keyframe.originOpacity!;
 
+    const rotate = (keyframe.rotate - keyframe.originRotate!) * processPercent + keyframe.originRotate!;
+
     return {
         translate,
         scale,
-        opacity
+        opacity,
+        rotate
     };
 };

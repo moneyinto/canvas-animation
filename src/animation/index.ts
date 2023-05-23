@@ -30,6 +30,8 @@ export default class CanvasAnimation {
         this._action();
     }
 
+    // 3d 绕轴旋转！！！！！！！！！！！
+    // 待研究
     private _action() {
         if (!this._progressing) return;
         const duration = Date.now() - this._startTime;
@@ -46,6 +48,7 @@ export default class CanvasAnimation {
         this._ctx.scale(...animationStatus.scale);
         this._ctx.translate(...animationStatus.translate);
         this._ctx.globalAlpha = animationStatus.opacity;
+        this._ctx.rotate(animationStatus.rotate * Math.PI / 180);
         this._draw();
         this._ctx.restore();
         window.requestAnimationFrame(this._action.bind(this));

@@ -29,10 +29,10 @@
 - [x] flash
 - [x] pulse
 - [x] rubberBand
-- [ ] shakeX
-- [ ] shakeY
-- [ ] headShake
-- [ ] swing
+- [x] shakeX
+- [x] shakeY
+- [x] headShake
+- [x] swing
 - [ ] tada
 - [ ] wobble
 - [ ] jello
@@ -152,3 +152,7 @@
 - [ ] slideOutLeft
 - [ ] slideOutRight
 - [ ] slideOutUp
+
+# 问题
+- 绕轴旋转实现问题
+- 旋转中心点 目前固定为矩形中心
