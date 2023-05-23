@@ -108,7 +108,7 @@
 - [x] lightSpeedOutLeft
 
 ### Rotating entrances
-- [ ] rotateIn
+- [x] rotateIn
 - [ ] rotateInDownLeft
 - [ ] rotateInDownRight
 - [ ] rotateInUpLeft
