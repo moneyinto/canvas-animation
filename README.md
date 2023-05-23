@@ -71,7 +71,7 @@
 - [x] fadeInLeft
 - [x] fadeInLeftBig
 - [x] fadeInRight
-- [ ] fadeInRightBig
+- [x] fadeInRightBig
 - [ ] fadeInUp
 - [ ] fadeInUpBig
 - [ ] fadeInTopLeft
