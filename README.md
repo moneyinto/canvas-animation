@@ -92,7 +92,7 @@
 - [x] fadeOutTopLeft
 - [x] fadeOutTopRight
 - [x] fadeOutBottomRight
-- [ ] fadeOutBottomLeft
+- [x] fadeOutBottomLeft
 
 ### Flippers
 - [ ] flip
