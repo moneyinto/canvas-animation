@@ -23,7 +23,7 @@
 # 功能列表
 ### Attention seekers
 - [x] bounce
-- [ ] flash
+- [x] flash
 - [ ] pulse
 - [ ] rubberBand
 - [ ] shakeX

@@ -1,4 +1,4 @@
-import { IKeyframe, IAnimationStatus } from "./types";
+import { IAnimationStatus } from "./types";
 
 const animationStatus: IAnimationStatus = {
     bounce: [
@@ -6,6 +6,7 @@ const animationStatus: IAnimationStatus = {
             range: [0, 20],
             translate: [0, 0],
             scale: [1, 1],
+            opacity: 1,
             change: false
         },
         {
@@ -14,12 +15,15 @@ const animationStatus: IAnimationStatus = {
             translate: [0, -30],
             baseScale: [1, 1],
             scale: [1, 1.1],
+            opacity: 1,
             change: true
         },
         {
             range: [40, 43],
             translate: [0, -30],
             scale: [1, 1.1],
+            baseOpacity: 1,
+            opacity: 1,
             change: false
         },
         {
@@ -28,6 +32,8 @@ const animationStatus: IAnimationStatus = {
             translate: [0, 0],
             baseScale: [1, 1.1],
             scale: [1, 1],
+            baseOpacity: 1,
+            opacity: 1,
             change: true
         },
         {
@@ -36,6 +42,8 @@ const animationStatus: IAnimationStatus = {
             translate: [0, -15],
             baseScale: [1, 1],
             scale: [1, 1.05],
+            baseOpacity: 1,
+            opacity: 1,
             change: true
         },
         {
@@ -44,6 +52,8 @@ const animationStatus: IAnimationStatus = {
             translate: [0, 0],
             baseScale: [1, 1.05],
             scale: [1, 0.95],
+            baseOpacity: 1,
+            opacity: 1,
             change: true
         },
         {
@@ -52,13 +62,58 @@ const animationStatus: IAnimationStatus = {
             translate: [0, -4],
             baseScale: [1, 0.95],
             scale: [1, 1.02],
+            baseOpacity: 1,
+            opacity: 1,
             change: true
         },
         {
             range: [90, 100],
             translate: [0, 0],
             scale: [1, 1],
+            opacity: 1,
             change: false
+        }
+    ],
+    flash: [
+        {
+            range: [0, 25],
+            baseTranslate: [0, 0],
+            translate: [0, 0],
+            baseScale: [1, 1],
+            scale: [1, 1],
+            baseOpacity: 1,
+            opacity: 0,
+            change: true
+        },
+        {
+            range: [25, 50],
+            baseTranslate: [0, 0],
+            translate: [0, 0],
+            baseScale: [1, 1],
+            scale: [1, 1],
+            baseOpacity: 0,
+            opacity: 1,
+            change: true
+        },
+        {
+            range: [50, 75],
+            baseTranslate: [0, 0],
+            translate: [0, 0],
+            baseScale: [1, 1],
+            scale: [1, 1],
+            baseOpacity: 1,
+            opacity: 0,
+            change: true
+        },
+        {
+            range: [75, 100],
+            baseTranslate: [0, 0],
+            translate: [0, 0],
+            baseScale: [1, 1],
+            scale: [1, 1],
+            baseOpacity: 0,
+            opacity: 1,
+            change: true
         }
     ]
 };
@@ -74,7 +129,8 @@ export const getAnimationStatus = (type: string, process: number) => {
     if (!keyframe.change) {
         return {
             translate: keyframe.translate,
-            scale: keyframe.scale
+            scale: keyframe.scale,
+            opacity: keyframe.opacity
         };
     }
     const range = keyframe.range[1] - keyframe.range[0];
@@ -89,8 +145,11 @@ export const getAnimationStatus = (type: string, process: number) => {
         (keyframe.scale[1] - keyframe.baseScale![1]) * processPercent + keyframe.baseScale![1]
     ];
 
+    const opacity = (keyframe.opacity - keyframe.baseOpacity!) * processPercent + keyframe.baseOpacity!;
+
     return {
         translate,
-        scale
+        scale,
+        opacity
     };
 };

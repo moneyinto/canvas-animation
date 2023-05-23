@@ -45,6 +45,7 @@ export default class CanvasAnimation {
         this._ctx.save();
         this._ctx.scale(...animationStatus.scale);
         this._ctx.translate(...animationStatus.translate);
+        this._ctx.globalAlpha = animationStatus.opacity;
         this._draw();
         this._ctx.restore();
         window.requestAnimationFrame(this._action.bind(this));

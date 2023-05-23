@@ -9,6 +9,8 @@ export interface IKeyframe {
     translate: [number, number];
     baseScale?: [number, number];
     scale: [number, number];
+    baseOpacity?: number;
+    opacity: number;
     change?: boolean;
 }
 
