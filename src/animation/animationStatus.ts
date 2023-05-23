@@ -941,6 +941,41 @@ export const animationStatus: IAnimationStatus = {
             originOpacity: 1,
             opacity: 0
         }
+    ],
+    bounceOutDown: [
+        {
+            ...baseKeyframe,
+            range: [0, 20],
+            originTranslate: [0, 0],
+            translate: [0, 10],
+            originScale: [1, 1],
+            scale: [1, 0.985]
+        },
+        {
+            ...baseKeyframe,
+            range: [20, 40],
+            originTranslate: [0, 10],
+            translate: [0, -20],
+            originScale: [0.985, 0.985],
+            scale: [1, 0.9]
+        },
+        {
+            ...baseKeyframe,
+            range: [40, 45],
+            translate: [0, -20],
+            scale: [1, 0.9],
+            change: false
+        },
+        {
+            ...baseKeyframe,
+            range: [45, 100],
+            originTranslate: [0, -20],
+            translate: [0, 2000],
+            originScale: [1, 0.9],
+            scale: [1, 3],
+            originOpacity: 1,
+            opacity: 0
+        }
     ]
 };
 

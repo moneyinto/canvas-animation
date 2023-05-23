@@ -124,7 +124,7 @@ export const ANIMATION_LIST = [
         children: [
             {
                 name: "bounceOut",
-                duration: 1000
+                duration: 750
             },
             {
                 name: "bounceOutDown",

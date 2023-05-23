@@ -59,7 +59,7 @@
 
 ### Bouncing exits
 - [x] bounceOut
-- [ ] bounceOutDown
+- [x] bounceOutDown
 - [ ] bounceOutLeft
 - [ ] bounceOutRight
 - [ ] bounceOutUp
