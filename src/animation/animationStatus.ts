@@ -1258,6 +1258,17 @@ export const animationStatus: IAnimationStatus = {
             originOpacity: 1,
             opacity: 0
         }
+    ],
+    fadeOutUp: [
+        {
+            ...baseKeyframe,
+            range: [0, 100],
+            translatePercentage: true,
+            originTranslate: [0, 0],
+            translate: [0, -100],
+            originOpacity: 1,
+            opacity: 0
+        }
     ]
 };
 
