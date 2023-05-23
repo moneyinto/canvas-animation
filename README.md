@@ -77,7 +77,7 @@
 - [x] fadeInTopLeft
 - [x] fadeInTopRight
 - [x] fadeInBottomLeft
-- [ ] fadeInBottomRight
+- [x] fadeInBottomRight
 
 ### Fading exits
 - [ ] fadeOut
