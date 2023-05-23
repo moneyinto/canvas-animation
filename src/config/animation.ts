@@ -182,6 +182,22 @@ export const ANIMATION_LIST = [
             {
                 name: "fadeInUpBig",
                 duration: 1000
+            },
+            {
+                name: "fadeInTopLeft",
+                duration: 1000
+            },
+            {
+                name: "fadeInTopRight",
+                duration: 1000
+            },
+            {
+                name: "fadeInBottomLeft",
+                duration: 1000
+            },
+            {
+                name: "fadeInBottomRight",
+                duration: 1000
             }
         ]
     },
