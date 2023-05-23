@@ -41,7 +41,7 @@
 ### Back entrances
 - [x] backInDown
 - [x] backInLeft
-- [ ] backInRight
+- [x] backInRight
 - [ ] backInUp
 
 ### Back exits
