@@ -275,11 +275,11 @@ export const ANIMATION_LIST = [
             },
             {
                 name: "flipOutX",
-                duration: 1000
+                duration: 750
             },
             {
                 name: "flipOutY",
-                duration: 1000
+                duration: 750
             }
         ]
     },
