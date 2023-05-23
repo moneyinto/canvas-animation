@@ -1711,6 +1711,19 @@ export const animationStatus: IAnimationStatus = {
             originOpacity: 0,
             opacity: 1
         }
+    ],
+    rollOut: [
+        {
+            ...baseKeyframe,
+            range: [0, 100],
+            translatePercentage: true,
+            originTranslate: [0, 0],
+            translate: [100, 0],
+            originRotate: 0,
+            rotate: 120,
+            originOpacity: 1,
+            opacity: 0
+        }
     ]
 };
 

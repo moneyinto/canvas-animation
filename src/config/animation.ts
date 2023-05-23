@@ -371,7 +371,7 @@ export const ANIMATION_LIST = [
             },
             {
                 name: "rollOut",
-                duration: 1000
+                duration: 750
             }
         ]
     },
