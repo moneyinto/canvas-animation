@@ -1323,6 +1323,20 @@ export const animationStatus: IAnimationStatus = {
             originOpacity: 1,
             opacity: 0
         }
+    ],
+    flip: [
+        {
+            ...baseKeyframe,
+            range: [0, 50],
+            originScale: [1.5, 1],
+            scale: [-1.5, 1.5]
+        },
+        {
+            ...baseKeyframe,
+            range: [50, 100],
+            originScale: [-1.5, 1.5],
+            scale: [1, 1]
+        }
     ]
 };
 

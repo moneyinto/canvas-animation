@@ -95,7 +95,7 @@
 - [x] fadeOutBottomLeft
 
 ### Flippers
-- [ ] flip
+- [x] flip
 - [ ] flipInX
 - [ ] flipInY
 - [ ] flipOutX
