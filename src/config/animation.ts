@@ -363,7 +363,7 @@ export const ANIMATION_LIST = [
             },
             {
                 name: "jackInTheBox",
-                duration: 1000
+                duration: 750
             },
             {
                 name: "rollIn",

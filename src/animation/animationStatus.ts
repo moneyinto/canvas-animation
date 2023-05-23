@@ -1666,6 +1666,38 @@ export const animationStatus: IAnimationStatus = {
             originOpacity: 1,
             opacity: 0
         }
+    ],
+    jackInTheBox: [
+        {
+            ...baseKeyframe,
+            range: [0, 50],
+            originRotate: 30,
+            rotate: -10,
+            originScale: [0.1, 0.1],
+            scale: [0.55, 0.55],
+            originOpacity: 0,
+            opacity: 0.5
+        },
+        {
+            ...baseKeyframe,
+            range: [50, 70],
+            originRotate: -10,
+            rotate: 3,
+            originScale: [0.55, 0.55],
+            scale: [0.73, 0.73],
+            originOpacity: 0.5,
+            opacity: 0.7
+        },
+        {
+            ...baseKeyframe,
+            range: [70, 100],
+            originRotate: 3,
+            rotate: 0,
+            originScale: [0.73, 0.73],
+            scale: [1, 1],
+            originOpacity: 0.7,
+            opacity: 1
+        }
     ]
 };
 

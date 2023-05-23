@@ -123,7 +123,7 @@
 
 ### Specials
 - [x] hinge
-- [ ] jackInTheBox
+- [x] jackInTheBox
 - [ ] rollIn
 - [ ] rollOut
 
