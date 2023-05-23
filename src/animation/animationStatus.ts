@@ -10,6 +10,8 @@ const baseKeyframe: IKeyframe = {
     opacity: 1,
     originRotate: 0,
     rotate: 0,
+    originSkew: [0, 0],
+    skew: [0, 0],
     change: true
 };
 
@@ -481,6 +483,61 @@ export const animationStatus: IAnimationStatus = {
             originRotate: -1,
             rotate: 0
         }
+    ],
+    jello: [
+        {
+            ...baseKeyframe,
+            range: [0, 11.1],
+            change: false
+        },
+        {
+            ...baseKeyframe,
+            range: [11.1, 22.2],
+            originSkew: [0, 0],
+            skew: [-12.5, -12.5]
+        },
+        {
+            ...baseKeyframe,
+            range: [22.2, 33.3],
+            originSkew: [-12.5, -12.5],
+            skew: [6.25, 6.25]
+        },
+        {
+            ...baseKeyframe,
+            range: [33.3, 44.4],
+            originSkew: [6.25, 6.25],
+            skew: [-3.125, -3.125]
+        },
+        {
+            ...baseKeyframe,
+            range: [44.4, 55.5],
+            originSkew: [-3.125, -3.125],
+            skew: [1.5625, 1.5625]
+        },
+        {
+            ...baseKeyframe,
+            range: [55.5, 66.6],
+            originSkew: [1.5625, 1.5625],
+            skew: [-0.78125, -0.78125]
+        },
+        {
+            ...baseKeyframe,
+            range: [66.6, 77.7],
+            originSkew: [-0.78125, -0.78125],
+            skew: [0.390625, 0.390625]
+        },
+        {
+            ...baseKeyframe,
+            range: [77.7, 88.8],
+            originSkew: [0.390625, 0.390625],
+            skew: [-0.1953125, -0.1953125]
+        },
+        {
+            ...baseKeyframe,
+            range: [88.8, 100],
+            originSkew: [-0.1953125, -0.1953125],
+            skew: [0, 0]
+        }
     ]
 };
 
@@ -497,7 +554,8 @@ export const getAnimationStatus = (type: string, process: number, width: number)
             translate: keyframe.translate,
             scale: keyframe.scale,
             opacity: keyframe.opacity,
-            rotate: 0
+            rotate: 0,
+            skew: [0, 0]
         };
     }
     const range = keyframe.range[1] - keyframe.range[0];
@@ -516,10 +574,16 @@ export const getAnimationStatus = (type: string, process: number, width: number)
 
     const rotate = (keyframe.rotate - keyframe.originRotate!) * processPercent + keyframe.originRotate!;
 
+    const skew: [number, number] = [
+        (keyframe.skew[0] - keyframe.originSkew![0]) * processPercent + keyframe.originSkew![0],
+        (keyframe.skew[1] - keyframe.originSkew![1]) * processPercent + keyframe.originSkew![1]
+    ];
+
     return {
         translate,
         scale,
         opacity,
-        rotate
+        rotate,
+        skew
     };
 };

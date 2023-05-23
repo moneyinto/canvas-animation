@@ -35,7 +35,7 @@
 - [x] swing
 - [x] tada
 - [x] wobble
-- [ ] jello
+- [x] jello
 - [ ] heartBeat
 
 ### Back entrances

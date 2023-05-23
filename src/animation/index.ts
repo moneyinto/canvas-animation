@@ -53,6 +53,7 @@ export default class CanvasAnimation {
         this._ctx.translate(...animationStatus.translate);
         this._ctx.globalAlpha = animationStatus.opacity;
         this._ctx.rotate(animationStatus.rotate * Math.PI / 180);
+        this._ctx.transform(1, animationStatus.skew[0] * Math.PI / 180, animationStatus.skew[1] * Math.PI / 180, 1, 0, 0);
         this._draw();
         this._ctx.restore();
         window.requestAnimationFrame(this._action.bind(this));

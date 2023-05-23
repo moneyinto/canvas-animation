@@ -15,6 +15,8 @@ export interface IKeyframe {
     opacity: number;
     originRotate?: number;
     rotate: number;
+    originSkew?: [number, number];
+    skew: [number, number];
     change?: boolean;
 }
 
