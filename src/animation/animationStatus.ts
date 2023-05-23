@@ -1133,6 +1133,16 @@ export const animationStatus: IAnimationStatus = {
             originOpacity: 0,
             opacity: 1
         }
+    ],
+    fadeInUpBig: [
+        {
+            ...baseKeyframe,
+            range: [0, 100],
+            originTranslate: [0, 2000],
+            translate: [0, 0],
+            originOpacity: 0,
+            opacity: 1
+        }
     ]
 };
 
