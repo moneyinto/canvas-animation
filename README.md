@@ -65,7 +65,7 @@
 - [x] bounceOutUp
 
 ### Fading entrances
-- [ ] fadeIn
+- [x] fadeIn
 - [ ] fadeInDown
 - [ ] fadeInDownBig
 - [ ] fadeInLeft
