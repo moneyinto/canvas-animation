@@ -130,7 +130,7 @@
 ### Zooming entrances
 - [x] zoomIn
 - [x] zoomInDown
-- [ ] zoomInLeft
+- [x] zoomInLeft
 - [ ] zoomInRight
 - [ ] zoomInUp
 
