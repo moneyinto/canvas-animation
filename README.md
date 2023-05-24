@@ -151,7 +151,7 @@
 - [x] slideOutDown
 - [x] slideOutLeft
 - [x] slideOutRight
-- [ ] slideOutUp
+- [x] slideOutUp
 
 # 问题
 - 绕轴旋转实现问题
