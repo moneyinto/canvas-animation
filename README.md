@@ -131,7 +131,7 @@
 - [x] zoomIn
 - [x] zoomInDown
 - [x] zoomInLeft
-- [ ] zoomInRight
+- [x] zoomInRight
 - [ ] zoomInUp
 
 ### Zooming exits
