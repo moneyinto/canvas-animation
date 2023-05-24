@@ -150,7 +150,7 @@
 ### Sliding exits
 - [x] slideOutDown
 - [x] slideOutLeft
-- [ ] slideOutRight
+- [x] slideOutRight
 - [ ] slideOutUp
 
 # 问题
