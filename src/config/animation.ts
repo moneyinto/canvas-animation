@@ -434,15 +434,15 @@ export const ANIMATION_LIST = [
             },
             {
                 name: "slideInLeft",
-                duration: 1000
+                duration: 500
             },
             {
                 name: "slideInRight",
-                duration: 1000
+                duration: 500
             },
             {
                 name: "slideInUp",
-                duration: 1000
+                duration: 500
             }
         ]
     },

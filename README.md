@@ -143,7 +143,7 @@
 
 ### Sliding entrances
 - [x] slideInDown
-- [ ] slideInLeft
+- [x] slideInLeft
 - [ ] slideInRight
 - [ ] slideInUp
 

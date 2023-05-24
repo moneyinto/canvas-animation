@@ -1944,6 +1944,15 @@ export const animationStatus: IAnimationStatus = {
             originTranslate: [0, -150],
             translate: [0, 0]
         }
+    ],
+    slideInLeft: [
+        {
+            ...baseKeyframe,
+            range: [0, 100],
+            translatePercentage: true,
+            originTranslate: [-100, 0],
+            translate: [0, 0]
+        }
     ]
 };
 
