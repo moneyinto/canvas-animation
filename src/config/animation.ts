@@ -429,12 +429,8 @@ export const ANIMATION_LIST = [
         name: "Sliding entrances",
         children: [
             {
-                name: "slideInUp",
-                duration: 1000
-            },
-            {
                 name: "slideInDown",
-                duration: 1000
+                duration: 500
             },
             {
                 name: "slideInLeft",
@@ -442,6 +438,10 @@ export const ANIMATION_LIST = [
             },
             {
                 name: "slideInRight",
+                duration: 1000
+            },
+            {
+                name: "slideInUp",
                 duration: 1000
             }
         ]
