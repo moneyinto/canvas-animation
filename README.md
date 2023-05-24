@@ -139,7 +139,7 @@
 - [x] zoomOutDown
 - [x] zoomOutLeft
 - [x] zoomOutRight
-- [ ] zoomOutUp
+- [x] zoomOutUp
 
 ### Sliding entrances
 - [ ] slideInDown
