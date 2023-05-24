@@ -148,7 +148,7 @@
 - [x] slideInUp
 
 ### Sliding exits
-- [ ] slideOutDown
+- [x] slideOutDown
 - [ ] slideOutLeft
 - [ ] slideOutRight
 - [ ] slideOutUp

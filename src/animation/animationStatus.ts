@@ -1971,6 +1971,15 @@ export const animationStatus: IAnimationStatus = {
             originTranslate: [0, 150],
             translate: [0, 0]
         }
+    ],
+    slideOutDown: [
+        {
+            ...baseKeyframe,
+            range: [0, 100],
+            translatePercentage: true,
+            originTranslate: [0, 0],
+            translate: [0, 150]
+        }
     ]
 };
 

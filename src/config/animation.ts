@@ -451,20 +451,20 @@ export const ANIMATION_LIST = [
         name: "Sliding exits",
         children: [
             {
-                name: "slideOutUp",
-                duration: 1000
-            },
-            {
                 name: "slideOutDown",
-                duration: 1000
+                duration: 750
             },
             {
                 name: "slideOutLeft",
-                duration: 1000
+                duration: 750
             },
             {
                 name: "slideOutRight",
-                duration: 1000
+                duration: 750
+            },
+            {
+                name: "slideOutUp",
+                duration: 750
             }
         ]
     }
