@@ -23,7 +23,7 @@
 ##### 在线体验地址：[https://demo.money-into.com/canvas-animation/](https://demo.money-into.com/canvas-animation/)
 
 # 效果展示
-<video src="./public/36b04f41b12040afb3f5fbd23683b471.mp4" autoplay></video>
+<image src="./public/demo.gif" />
 
 
 # 功能列表
