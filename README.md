@@ -137,7 +137,7 @@
 ### Zooming exits
 - [x] zoomOut
 - [x] zoomOutDown
-- [ ] zoomOutLeft
+- [x] zoomOutLeft
 - [ ] zoomOutRight
 - [ ] zoomOutUp
 
