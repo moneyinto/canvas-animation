@@ -1739,6 +1739,32 @@ export const animationStatus: IAnimationStatus = {
             range: [50, 100],
             change: false
         }
+    ],
+    zoomInDown: [
+        {
+            ...baseKeyframe,
+            range: [0, 60],
+            originScale: [0.1, 0.1],
+            scale: [0.475, 0.475],
+            originOpacity: 0,
+            opacity: 1,
+            translatePercentage: true,
+            originTranslate: [0, -1000],
+            translate: [0, 60]
+        },
+        {
+            ...baseKeyframe,
+            range: [60, 70],
+            originTranslate: [0, 60],
+            translate: [0, 0],
+            originScale: [0.475, 0.475],
+            scale: [1, 1]
+        },
+        {
+            ...baseKeyframe,
+            range: [70, 100],
+            change: false
+        }
     ]
 };
 
