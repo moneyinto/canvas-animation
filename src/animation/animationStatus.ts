@@ -1895,6 +1895,26 @@ export const animationStatus: IAnimationStatus = {
             originTranslate: [42, 0],
             translate: [-2000, 0]
         }
+    ],
+    zoomOutRight: [
+        {
+            ...baseKeyframe,
+            range: [0, 40],
+            originScale: [1, 1],
+            scale: [0.475, 0.475],
+            originTranslate: [0, 0],
+            translate: [-42, 0]
+        },
+        {
+            ...baseKeyframe,
+            range: [40, 100],
+            originScale: [0.475, 0.475],
+            scale: [0.1, 0.1],
+            originOpacity: 1,
+            opacity: 0,
+            originTranslate: [-42, 0],
+            translate: [2000, 0]
+        }
     ]
 };
 
