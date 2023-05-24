@@ -1724,6 +1724,21 @@ export const animationStatus: IAnimationStatus = {
             originOpacity: 1,
             opacity: 0
         }
+    ],
+    zoomIn: [
+        {
+            ...baseKeyframe,
+            range: [0, 50],
+            originScale: [0.3, 0.3],
+            scale: [1, 1],
+            originOpacity: 0,
+            opacity: 1
+        },
+        {
+            ...baseKeyframe,
+            range: [50, 100],
+            change: false
+        }
     ]
 };
 

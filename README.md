@@ -125,10 +125,10 @@
 - [x] hinge
 - [x] jackInTheBox
 - [x] rollIn
-- [ ] rollOut
+- [x] rollOut
 
 ### Zooming entrances
-- [ ] zoomIn
+- [x] zoomIn
 - [ ] zoomInDown
 - [ ] zoomInLeft
 - [ ] zoomInRight
