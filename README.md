@@ -21,6 +21,7 @@
 > Canvas 实现 [Animate.css](https://animate.style/) 的动画效果。
 
 ##### 在线体验地址：[https://demo.money-into.com/canvas-animation/](https://demo.money-into.com/canvas-animation/)
+##### 在线体验地址2：[http://animation.money-into.com](http://animation.money-into.com)
 
 # 效果展示
 <image src="./public/demo.gif" />
